@@ -3,6 +3,8 @@
 ## TO DO
 * Drivetrain [DONE] 
 * Intake
+* Light documentation
+* Static documentation
 
 
 ## Credits 
