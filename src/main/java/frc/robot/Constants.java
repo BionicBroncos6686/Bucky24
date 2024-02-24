@@ -17,13 +17,19 @@ public final class Constants {
     public static final int kDriverControllerPort = 0;
   }
 
+
+// Drivetrain motor spark port ID's 
+// DANGER ZONE 
+// Please make sure to assign the correct ID's, you can break your bot. 
 public static final int DRIVETRAIN_LEFT_FRONT_SPARK = 1;
 public static final int DRIVETRAIN_LEFT_REAR_SPARK = 2;
 public static final int DRIVETRAIN_RIGHT_REAR_SPARK = 3;
 public static final int DRIVETRAIN_RIGHT_FRONT_SPARK = 4;
 
-// JOYSTICKS  
-public static final int DRIVER_CONTROLLER = 0;
+// JOYSTICKS - Drivetrain controls 
+public static final int DRIVER_CONTROLLER = 0; 
 public static final int DRIVER_CONTROLLER_MOVE_AXIS = 1;
 public static final int DRIVER_CONTROLLER_ROTATE_AXIS = 2;
+
+// BUTTONS - Intake controls 
 }
