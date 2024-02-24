@@ -1,5 +1,5 @@
-# Palm Beach Central Robotics 
-Palm Beach Centrals Bronco's Robotics Buckybot implimentation of an Arcade-Drivetrain robot. 
+# Palm Beach Central Robotics - Bucky
+Palm Beach Centrals Bronco's Robotics implimentation of an Arcade-Drivetrain robot. 
 
 ## Hardware 
 RoboRIO 
@@ -13,7 +13,7 @@ MK Made 12v battery
 * **FRC** VSCode (created with FRC_VSCODE 2023) 
 * FRC Imaging tool 
 * FRC Driver Station
-* FRC Radio configuration 
+* [optional] FRC Radio configuration 
 
 ## TO DO
 * Drivetrain [DONE] 
@@ -21,8 +21,9 @@ MK Made 12v battery
 * Light documentation
 * Static documentation
 
+
 ## Acknowledgements 
 Huge thanks to FRC team 3255 for their incredible Java, FRC VSCode, and RoboRIO documentation 
 
 ## Credits 
-Written by @GreenyDev
+Code and documentation written by GreenyDev
