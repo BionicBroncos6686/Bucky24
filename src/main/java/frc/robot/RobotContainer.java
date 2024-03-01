@@ -13,6 +13,8 @@ import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.PivotSubsystem;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 
 /**
@@ -29,15 +31,16 @@ public class RobotContainer {
 
   
   public static Joystick driverController = new Joystick(Constants.DRIVER_CONTROLLER);
-
+  CommandXboxController TCommandController = new CommandXboxController(0); // Creates a CommandXboxController on port 1.
+  Trigger xButton = TCommandController.x(); // Creates a new Trigger object for the `X` button on exampleCommandController
   public RobotContainer() {
     // Configure the button bindings
     configureButtonBindings();
 
     // Set default commands on subsystems
     m_drivetrain.setDefaultCommand(new DriveArcade());
-    m_pivot.setDefaultCommand(new PivotPowerCommand(m_pivot, driverController.getRawAxis(3) - driverController.getRawAxis(2)));
-    
+    m_pivot.setDefaultCommand(new PivotPowerCommand(m_pivot));
+  
   }
 
     /**

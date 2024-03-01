@@ -5,6 +5,7 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class PivotSubsystem extends SubsystemBase {
@@ -15,6 +16,12 @@ public class PivotSubsystem extends SubsystemBase {
         pivotMotor = new VictorSPX(5);
         pivotMotor.setInverted(true);
         pivotMotor.setNeutralMode(NeutralMode.Brake);
+    }
+
+
+    @Override
+    public void periodic(){
+        
     }
 
     public void setVoltage(double power){

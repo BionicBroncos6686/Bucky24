@@ -30,8 +30,8 @@ public class Drivetrain extends SubsystemBase {
    rightFrontSpark = new CANSparkMax(Constants.DRIVETRAIN_RIGHT_FRONT_SPARK, MotorType.kBrushless);
    rightRearSpark = new CANSparkMax(Constants.DRIVETRAIN_RIGHT_REAR_SPARK, MotorType.kBrushless);
 
-  leftMotors = new MotorControllerGroup(leftFrontSpark, leftRearSpark);
-  rightMotors = new MotorControllerGroup(rightFrontSpark, rightRearSpark);
+  leftMotors = new MotorControllerGroup(rightFrontSpark, rightRearSpark);
+  rightMotors = new MotorControllerGroup(leftFrontSpark, leftRearSpark);
 
   differentialDrive = new DifferentialDrive(leftMotors, rightMotors);
 
