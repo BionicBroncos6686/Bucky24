@@ -7,8 +7,10 @@ package frc.robot;
 
 import frc.robot.commands.DriveArcade;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.PivotPowerCommand;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.PivotSubsystem;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.Command;
 
@@ -21,6 +23,7 @@ import edu.wpi.first.wpilibj2.command.Command;
  */
 public class RobotContainer {
   public static final Drivetrain m_drivetrain = new Drivetrain();
+  public final PivotSubsystem m_pivot = new PivotSubsystem();
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
 
@@ -33,6 +36,7 @@ public class RobotContainer {
 
     // Set default commands on subsystems
     m_drivetrain.setDefaultCommand(new DriveArcade());
+    m_pivot.setDefaultCommand(new PivotPowerCommand(m_pivot, driverController.getRawAxis(3) - driverController.getRawAxis(2)));
     
   }
 
