@@ -14,7 +14,7 @@ public class PivotPowerCommand extends CommandBase {
     public PivotPowerCommand(PivotSubsystem pivot){
         m_pivot = pivot;
        
-        kPower = 0.02; 
+        kPower = 0.2; 
         addRequirements(m_pivot);
 
     }
